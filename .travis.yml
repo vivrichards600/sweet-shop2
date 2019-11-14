@@ -1,0 +1,12 @@
+sudo:          required
+dist:          trusty
+language:      node_js
+node_js:
+  - "node"
+install:       npm install
+script:
+  - webdriver-manager start
+  - protractor conf.js
+cache:
+  directories:
+    - node_modules
